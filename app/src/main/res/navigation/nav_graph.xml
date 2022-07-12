@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.quantumit.ui.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_passwordResetFragment"
+            app:destination="@id/passwordResetFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_newsActivity"
+            app:destination="@id/newsActivity"
+            app:popUpTo="@id/newsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordResetFragment"
+        android:name="com.example.quantumit.ui.fragments.PasswordResetFragment"
+        android:label="fragment_password_reset"
+        tools:layout="@layout/fragment_password_reset" >
+        <action
+            android:id="@+id/action_passwordResetFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/newsActivity"
+        android:name="com.example.quantumit.ui.NewsActivity"
+        android:label="activity_news"
+        tools:layout="@layout/activity_news" />
+</navigation>

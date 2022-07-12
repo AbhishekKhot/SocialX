@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Social X</string>
+    <string name="Forgot_Password"><u>Forgot Password</u></string>
+    <string name="register"><u>Register Now</u></string>
+    <string name="sign_in"><u>SIGN IN</u></string>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+</resources>

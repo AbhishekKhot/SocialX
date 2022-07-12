@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94784547360",
+    "project_id": "quantumit-a892b",
+    "storage_bucket": "quantumit-a892b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94784547360:android:63cfd4ab2d9ca4b40c6a45",
+        "android_client_info": {
+          "package_name": "com.example.quantumit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94784547360-kuc6koqqhrb3j55m1rovn5v02cgk0rn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnf-VsDy1G5MZkGlRWgwCAsIuktec_gzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94784547360-kuc6koqqhrb3j55m1rovn5v02cgk0rn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
