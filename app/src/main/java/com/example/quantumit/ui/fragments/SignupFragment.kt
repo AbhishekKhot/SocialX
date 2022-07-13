@@ -9,12 +9,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.quantumit.R
-//import com.facebook.AccessToken
-//import com.facebook.CallbackManager
-//import com.facebook.FacebookCallback
-//import com.facebook.FacebookException
-//import com.facebook.login.LoginManager
-//import com.facebook.login.LoginResult
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -32,7 +32,7 @@ class SignupFragment : Fragment() {
 
     private lateinit var gso: GoogleSignInOptions
     private lateinit var gsc: GoogleSignInClient
-   // private var mCallbackManager: CallbackManager? = null
+    private var mCallbackManager: CallbackManager? = null
     private val firebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreateView(
@@ -45,7 +45,7 @@ class SignupFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       // mCallbackManager = CallbackManager.Factory.create()
+        mCallbackManager = CallbackManager.Factory.create()
 
         gso =
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
@@ -65,7 +65,7 @@ class SignupFragment : Fragment() {
         }
 
         btnLogin.setOnClickListener { v ->
-           emailLogin(v)
+            emailLogin(v)
         }
     }
 
@@ -92,42 +92,44 @@ class SignupFragment : Fragment() {
     }
 
     private fun faceBookLogin() {
-//        LoginManager.getInstance().logInWithReadPermissions(requireActivity(),
-//            Arrays.asList("email", "public_profile"))
-//        LoginManager.getInstance()
-//            .registerCallback(mCallbackManager, object : FacebookCallback<LoginResult> {
-//                override fun onSuccess(loginResult: LoginResult) {
-//                    handleFacebookAccessToken(loginResult.accessToken)
-//                }
-//
-//                override fun onCancel() {
-//
-//                }
-//
-//                override fun onError(error: FacebookException) {
-//
-//                }
-//            })
+        LoginManager.getInstance().logInWithReadPermissions(requireActivity(),
+            Arrays.asList("email", "public_profile"))
+        LoginManager.getInstance()
+            .registerCallback(mCallbackManager, object : FacebookCallback<LoginResult> {
+                override fun onSuccess(loginResult: LoginResult) {
+                    handleFacebookAccessToken(loginResult.accessToken)
+                }
+
+                override fun onCancel() {
+
+                }
+
+                override fun onError(error: FacebookException) {
+
+                }
+            })
     }
 
-//    private fun handleFacebookAccessToken(accessToken: AccessToken?) {
-//        val credential = FacebookAuthProvider.getCredential(accessToken!!.token)
-//        firebaseAuth.signInWithCredential(credential)
-//            .addOnCompleteListener(requireActivity()
-//            ) { p0 ->
-//                if (p0.isSuccessful) {
-//
-//                    findNavController().navigate(R.id.action_mainFragment_to_newsActivity)
-//                } else {
-//                    Toast.makeText(requireActivity(), "Authentication failed", Toast.LENGTH_SHORT)
-//                        .show()
-//                }
-//            }
-//    }
+    private fun handleFacebookAccessToken(accessToken: AccessToken?) {
+        val credential = FacebookAuthProvider.getCredential(accessToken!!.token)
+        firebaseAuth.signInWithCredential(credential)
+            .addOnCompleteListener(requireActivity()
+            ) { p0 ->
+                if (p0.isSuccessful) {
+
+                    findNavController().navigate(R.id.action_mainFragment_to_newsActivity)
+                } else {
+                    Toast.makeText(requireActivity(), "Authentication failed", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+    }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        mCallbackManager?.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode === 1000) {
             val task: Task<GoogleSignInAccount> =
@@ -142,4 +144,5 @@ class SignupFragment : Fragment() {
             }
         }
     }
+
 }
