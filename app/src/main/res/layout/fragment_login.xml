@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Name"
+        android:text="@string/name"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,12 +23,13 @@
         android:id="@+id/etName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Jone Doe"
+        android:hint="@string/jone_doe"
         android:paddingEnd="8dp"
-        android:drawableRight="@drawable/ic_baseline_account_box_24"
+        android:drawableEnd="@drawable/ic_baseline_account_box_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tools:ignore="RtlSymmetry" />
 
     <TextView
         android:id="@+id/tvEmail"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Email"
+        android:text="@string/email"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/etName"
@@ -46,12 +47,13 @@
         android:id="@+id/etMail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="jhondoe@gmail.com"
+        android:hint="@string/jhondoe_gmail_com"
         android:paddingEnd="8dp"
-        android:drawableRight="@drawable/ic_baseline_mail_24"
+        android:drawableEnd="@drawable/ic_baseline_mail_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        tools:ignore="RtlSymmetry" />
 
     <TextView
         android:id="@+id/tvContactNo"
@@ -59,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Contact no"
+        android:text="@string/contact_no"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,13 +82,13 @@
         android:id="@+id/etPhoneNo"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="123456789"
-        android:drawableRight="@drawable/ic_baseline_phone_24"
+        android:hint="@string/_123456789"
+        android:drawableEnd="@drawable/ic_baseline_phone_24"
         app:layout_constraintBottom_toBottomOf="@+id/CountryCodePicker"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingEnd="8dp"
-        app:layout_constraintTop_toTopOf="@+id/CountryCodePicker" />
-
+        app:layout_constraintTop_toTopOf="@+id/CountryCodePicker"
+        tools:ignore="RtlSymmetry" />
 
     <TextView
         android:id="@+id/tvPassword"
@@ -96,7 +98,7 @@
         android:layout_marginTop="60dp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="password"
+        android:text="@string/password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvContactNo" />
 
@@ -105,13 +107,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="*******"
-        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:hint="@string/password_hint"
+        android:drawableEnd="@drawable/ic_baseline_lock_24"
         android:paddingEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/tvPassword"
-        app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+        tools:ignore="RtlSymmetry" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -131,7 +134,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
-        android:text="I agree with term and conditions"
+        android:text="@string/i_agree_with_term_and_conditions"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,14 +145,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account?"
+        android:text="@string/already_have_an_account"
         app:layout_constraintBottom_toBottomOf="@+id/tvSignin"
         app:layout_constraintEnd_toStartOf="@+id/tvSignin"
         app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvSignin"
         app:layout_constraintVertical_bias="0.0" />
-
 
     <TextView
         android:id="@+id/tvSignin"
@@ -168,7 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
         android:layout_marginTop="28dp"
-        android:text="REGISTER"
+        android:text="@string/button_register"
         android:background="@drawable/button_background"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
