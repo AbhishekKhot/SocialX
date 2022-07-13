@@ -13,3 +13,6 @@ Google firebase for user login and registration purpose provided Google & Facebo
 Country Code Picker pick the country code for mobile number
 
 Kotlin Coroutine for asynchronous operation(light weight threds)
+
+https://user-images.githubusercontent.com/90719979/178657661-3c769807-243b-4bbd-b54c-442f4b0f0450.mp4
+
